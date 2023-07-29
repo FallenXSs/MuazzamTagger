@@ -8,13 +8,12 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(name)s - [%(levelname)s] - %(message)s'
 )
-LOGGER = logging.getLogger(name)
+LOGGER = logging.getLogger("my_logger")
 
-api_id = "25719105"
+api_id = 25719105
 api_hash = "5ac96667719700bf3f9cb0d5fb30b748"
 bot_token = os.environ.get("6347172241:AAE5pVT6ASZuE9Kd4gicFGF4ZeayPrR1EGY")
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
-
 anlik_calisan = []
 
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
