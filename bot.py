@@ -12,7 +12,7 @@ LOGGER = logging.getLogger(__name__)
 
 api_id = int(os.environ.get("9839833"))
 api_hash = os.environ.get("23818dbf65e7d370cc0adb900f32d16c")
-bot_token = os.environ.get("6340361988:AAHUy_QulpqKXr8HXpNaFvNhBvjmVP1TooQ")
+bot_token = os.environ.get("6347172241:AAE5pVT6ASZuE9Kd4gicFGF4ZeayPrR1EGY")
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 anlik_calisan = []
@@ -25,22 +25,22 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**KatanaTagger Bot**, Grup veya kanaldaki neredeyse tüm üyelerden bahsedebilirim ★\nDaha fazla bilgi için **/help**'i tıklayın.",
+  await event.reply("**Luci Tagger Bot**, Grup veya kanaldaki neredeyse tüm üyelerden bahsedebilirim ★\nDaha fazla bilgi için **/help**'i tıklayın.",
                     buttons=(
-                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/ZebraTaggerBot?startgroup=a'),
-                      Button.url('📣 Support', 'https://t.me/Sohbet_KaosTr'),
-                      Button.url('🚀 Sahibim', 'https://t.me/BenYakup')]
+                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/LuciTaggerBot?startgroup=a'),
+                      Button.url('📣 Support', 'https://t.me/OldHouseChet'),
+                      Button.url('🚀 Sahibim', 'https://t.me/HzZenta')]
                     ),
                     link_preview=False
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Loungetagger bot'un Yardım Menüsü**\n\nKomut: /all \n  Bu komutu, başkalarına bahsetmek istediğiniz metinle birlikte kullanabilirsiniz. \n`Örnek: /all Günaydın!`  \nBu komutu yanıt olarak kullanabilirsiniz. herhangi bir mesaj Bot, yanıtlanan iletiye kullanıcıları etiketleyecek"
+  helptext = "**LuciTagger bot'un Yardım Menüsü**\n\nKomut: /all \n  Bu komutu, başkalarına bahsetmek istediğiniz metinle birlikte kullanabilirsiniz. \n`Örnek: /all Günaydın!`  \nBu komutu yanıt olarak kullanabilirsiniz. herhangi bir mesaj Bot, yanıtlanan iletiye kullanıcıları etiketleyecek"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/ZebraTaggerBot?startgroup=a'),
-                       Button.url('📣 Support', 'https://t.me/Sohbet_KaosTr'),
-                      Button.url('🚀 Sahibim', 'https://t.me/BenYakup')]
+                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/LuciTaggerBot?startgroup=a'),
+                       Button.url('📣 Support', 'https://t.me/OldHouseChet'),
+                      Button.url('🚀 Sahibim', 'https://t.me/HzZenta')]
                     ),
                     link_preview=False
                    )
@@ -106,5 +106,5 @@ async def mentionall(event):
         usrtxt = ""
 
 
-print(">> Bot çalıyor merak etme 🚀 @Sohbet_KaosTr bilgi alabilirsin <<")
+print(">> Bot çalıyor merak etme 🚀 @HzZenta bilgi alabilirsin <<")
 client.run_until_disconnected()
