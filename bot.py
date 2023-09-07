@@ -27,8 +27,8 @@ async def start(event):
   await event.reply("**Luci Tagger Bot**, Grup veya kanaldaki neredeyse tüm üyelerden bahsedebilirim ★\nDaha fazla bilgi için **/help**'i tıklayın.",
                     buttons=(
                       [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/LuciTaggerBot?startgroup=a'),
-                      Button.url('📣 Support', 'https://t.me/OldHouseChet'),
-                      Button.url('🚀 Sahibim', 'https://t.me/HzZenta')]
+                      Button.url('📣 Support', 'https://t.me/MajesteTr'),
+                      Button.url('🚀 Sahibim', 'https://t.me/BenYakup')]
                     ),
                     link_preview=False
                    )
@@ -38,8 +38,8 @@ async def help(event):
   await event.reply(helptext,
                     buttons=(
                       [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/LuciTaggerBot?startgroup=a'),
-                       Button.url('📣 Support', 'https://t.me/OldHouseChet'),
-                      Button.url('🚀 Sahibim', 'https://t.me/HzZenta')]
+                       Button.url('📣 Support', 'https://t.me/MajesteTr'),
+                      Button.url('🚀 Sahibim', 'https://t.me/BenYakup')]
                     ),
                     link_preview=False
                    )
@@ -105,5 +105,5 @@ async def mentionall(event):
         usrtxt = ""
 
 
-print(">> Bot çalıyor merak etme 🚀 @HzZenta bilgi alabilirsin <<")
+print(">> Bot çalıyor merak etme 🚀 @BenYakup bilgi alabilirsin <<")
 client.run_until_disconnected()
